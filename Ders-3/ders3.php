@@ -105,15 +105,28 @@
         str_split():
     Verilen bir metnin belirten sayı kadar ayrılarak bir dizi içeriğine aktarılması. Eğer sayı belirtilmezse metni harf harf böler. 
      */
+
+     
     echo "<br>";
     $iban = "TR0010002000300040005000";
-    $ibanYeni = str_split($iban, 4);
-    print_r($ibanYeni);
-    echo "<br>";
+    $yeniIban = str_split($iban, 4);
+    echo "<pre>";
+    print_r($yeniIban);
+    echo "</pre>";
 
-    foreach ($ibanYeni as $parca) {
-        echo "$parca ";
+    echo "<br>İmplode IBan: " . implode("-", $yeniIban);
+
+    echo "<br> Foreach Iban: ";
+    foreach ($yeniIban as $parca) {
+        echo $parca . " ";
     }
+
+    echo "<br> For Iban: ";
+    for ($i = 0; $i < count($yeniIban); $i++) {
+        echo $yeniIban[$i] . " ";
+    }
+
+
 
     /*  Trim - Substr - str_replace - md5 - sha1*/
 
