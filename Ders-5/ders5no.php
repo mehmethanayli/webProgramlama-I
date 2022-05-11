@@ -224,8 +224,25 @@
     2-Rasgele 0-100 arasında üretilen değerin 50'den küçük olduğu durumlarda kaldınız, büyükse geçtiniz yazdırınız.
     3-Doğum yılına göre 18 yaşından büyük olanların ehliyet alabileceğini kontrol eden if bloğunu yazınız. */
 
-    ?>
 
+
+    echo "<hr>";
+    $dogumYili = rand(1990, 2012);
+    echo "Doğum Yılı: $dogumYili";
+    if ((2022 - $dogumYili) >= 18) {
+        echo "Ehliyet Alabilir";
+    } else {
+        echo "Ehliyet alamazsınız";
+    }
+
+
+
+
+
+
+
+
+    ?>
 
 
 
